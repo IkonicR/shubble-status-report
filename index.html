@@ -117,12 +117,32 @@
             </div>
 
             <div class="card">
+                <h3>Redundant "Age" Input</h3>
+                <p><strong>Problem:</strong> There is a grayed-out "Age" field sitting <em>above</em> the Date of Birth
+                    picker. It's uneditable and only fills in <em>after</em> you select a date below it. This confuses
+                    users who try to tap it first.</p>
+                <p><strong>Recommendation:</strong> Delete this field. We don't need to show the user their own age
+                    math. Just take the Date of Birth and calculate it in the background.</p>
+                <img src="assets/legacy_age_input.png" alt="Redundant Age Input" style="max-width: 300px;">
+            </div>
+
+            <div class="card">
                 <h3>Location Selection</h3>
                 <p><strong>Problem:</strong> Dragging a pin is frustrating when you know exactly where you want to go.
                 </p>
                 <p><strong>Recommendation:</strong> Integrate Google Places Autocomplete. Users can just type "Cape Town
                     Airport" and get the exact spot instantly.</p>
                 <img src="assets/current_location_selection_ux.png" alt="Location Selection">
+            </div>
+
+            <div class="card">
+                <h3>Broken Styling (Add Dependents)</h3>
+                <p><strong>Problem:</strong> Some screens, like "Add Dependents", completely lose the app's branding.
+                    The background turns white, fonts change, and buttons become inconsistent. It looks like an unstyled
+                    wireframe.</p>
+                <p><strong>Recommendation:</strong> Enforce the global theme on <em>every</em> view. A sub-flow
+                    shouldn't feel like a different app.</p>
+                <img src="assets/legacy_broken_styling.png" alt="Broken Styling Example" style="max-width: 300px;">
             </div>
 
             <div class="card">
