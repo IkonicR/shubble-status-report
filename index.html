@@ -79,7 +79,7 @@
         <section>
             <h2>2. UI/UX Overhaul Needed</h2>
             <p>I've pinpointed specific areas where we can elevate the design from "Utility" to "Premium Experience".
-            </p>
+                These are high-impact changes that will immediately improve user trust and retention.</p>
 
             <div class="card">
                 <h3>App Icon</h3>
@@ -104,6 +104,16 @@
                 <p><strong>Recommendation:</strong> Implement a proper formatter with a country flag selector. It looks
                     better and prevents bad data from getting into the system.</p>
                 <img src="assets/phone_input_ux.png" alt="Phone Input UX">
+            </div>
+
+            <div class="card">
+                <h3>Sign-In Success Popup</h3>
+                <p><strong>Problem:</strong> After signing in, the user is blocked by a "Success! Please wait..." popup
+                    that lingers for several seconds before redirecting. This adds unnecessary friction to a critical
+                    flow.</p>
+                <p><strong>Recommendation:</strong> Remove this entirely. The transition to the home screen should be
+                    instant and seamless once authentication is confirmed.</p>
+                <img src="assets/legacy_success_popup.png" alt="Sign-In Popup Issue" style="max-width: 300px;">
             </div>
 
             <div class="card">
@@ -147,7 +157,8 @@
             <div class="card">
                 <h3>Broken Styling & Inconsistency</h3>
                 <p><strong>Problem:</strong> Several screens (e.g., "Add Dependents", "Payment Methods") completely lose
-                    the app's branding. We see unstyled inputs, generic "Button" labels, and random layout shifts.</p>
+                    the app's branding. We see unstyled inputs, generic "Button" labels, and random layout shifts. It
+                    looks like an unstyled wireframe.</p>
                 <p><strong>Recommendation:</strong> Enforce the global theme on <em>every</em> view. A sub-flow
                     shouldn't feel like a different app.</p>
                 <div class="comparison-grid" style="margin-top: 1rem;">
