@@ -20,13 +20,14 @@
         <section class="card">
             <h2>Executive Summary</h2>
             <p>
-                We have performed a "Basics-Check" on the Android version of the Shubble app and identified several
-                key areas for improvement. Additionally, the iOS build is currently paused due to an Apple ID sign-in
-                requirement.
+                I've performed a "Basics-Check" on the Android version of the Shubble app. While the core logic is
+                functional, I've identified several key areas where the user experience creates friction. Additionally,
+                the iOS build is currently paused due to an Apple ID sign-in requirement.
             </p>
             <p>
-                <strong>Observation:</strong> The current build feels slightly dated compared to modern market leaders.
-                A targeted UI/UX refresh would significantly elevate the brand perception.
+                <strong>My Observation:</strong> The current interface feels significantly dated—several generations
+                behind modern consumer apps like Uber or Bolt. To command a premium price and trust, the app needs a
+                visual overhaul to match the quality of the service itself.
             </p>
         </section>
 
@@ -35,81 +36,84 @@
 
             <h3>🚨 Priority Findings</h3>
             <div class="alert alert-critical">
-                <strong>Missing Age Gate:</strong> There is currently NO age verification logic in the app. While there
-                is a date picker, it does not verify if the user is 18+.
+                <strong>Missing Age Gate:</strong> I noticed there is currently NO age verification logic. While there
+                is a date picker, it doesn't actually stop a minor from signing up. This is a compliance risk we should
+                plug immediately.
             </div>
             <ul>
-                <li><strong>T&Cs Checkbox:</strong> The text is not clickable, making it hard to select.</li>
-                <li><strong>Inconsistent Errors:</strong> Messages lack professional capitalization (e.g., "please
-                    select your birthdate").</li>
-                <li><strong>Typos:</strong> "Nexts" button on startup screen.</li>
+                <li><strong>T&Cs Checkbox:</strong> The text isn't clickable, which is a small but annoying usability
+                    issue.</li>
+                <li><strong>Inconsistent Errors:</strong> The error messages feel a bit raw (e.g., lowercase "please
+                    select your birthdate"). I'll polish these up to sound more professional.</li>
+                <li><strong>Typos:</strong> Spotted a "Nexts" button on the startup screen. Easy fix.</li>
             </ul>
             <img src="assets/nexts_typo.png" alt="Nexts Typo">
 
             <h3>🛑 Booking Flow Analysis</h3>
             <div class="alert alert-warning">
-                <strong>Layout Issue:</strong> The "Book Now" button is pushed below the fold, forcing the user to
-                scroll for the main CTA.
+                <strong>Layout Issue:</strong> The "Book Now" button is pushed below the fold. Users shouldn't have to
+                scroll to find the primary "Buy" button—it should be front and center.
             </div>
             <img src="assets/uploaded_image_1764632090827.png" alt="Booking UI Issues">
 
-            <p><strong>Features to Retain:</strong> Despite the UI issues, the logic for Pickup Time, Special
-                Instructions, and Extras is solid. However, this logic should be split into multiple steps for a
-                smoother user experience.</p>
+            <p><strong>Features to Retain:</strong> Despite the layout issues, the underlying logic for Pickup Time,
+                Special Instructions, and Extras is actually quite solid. I plan to keep this logic but break it down
+                into a multi-step "Wizard" to make it feel less overwhelming.</p>
         </section>
 
         <section>
             <h2>2. UI/UX Overhaul Needed</h2>
-            <p>We identified specific areas where the visual design can be elevated to meet the premium standard we are
-                aiming for.</p>
+            <p>I've pinpointed specific areas where we can elevate the design from "Utility" to "Premium Experience".
+            </p>
 
             <div class="card">
                 <h3>App Icon</h3>
-                <p><strong>Problem:</strong> The current asset is low-resolution and lacks distinctiveness.</p>
-                <p><strong>Solution:</strong> We will design a vector-based, high-fidelity icon that utilizes the new
-                    "Safety Teal" palette. This ensures brand recognition at any scale and communicates trust instantly.
-                </p>
+                <p><strong>Problem:</strong> The current icon is low-res and gets lost on a busy home screen.</p>
+                <p><strong>My Solution:</strong> I'll design a crisp, vector-based icon using our new "Safety Teal". It
+                    needs to look trustworthy and instantly recognizable.</p>
                 <img src="assets/current_app_icon.png" alt="Current App Icon">
             </div>
 
             <div class="card">
                 <h3>Phone Number Input</h3>
-                <p><strong>Problem:</strong> The raw text input lacks visual validation.</p>
-                <p><strong>Solution:</strong> Implement `libphonenumber` for real-time formatting and a visual country
-                    code selector. This reduces cognitive load and prevents invalid data entry.</p>
+                <p><strong>Problem:</strong> It's just a raw text field right now. It's easy to type a wrong number.</p>
+                <p><strong>My Solution:</strong> I'll implement a proper formatter with a country flag selector. It
+                    looks better and prevents bad data from getting into the system.</p>
                 <img src="assets/phone_input_ux.png" alt="Phone Input UX">
             </div>
 
             <div class="card">
                 <h3>Onboarding Navigation</h3>
-                <p><strong>Problem:</strong> Navigation controls are small and shift position between screens.</p>
-                <p><strong>Solution:</strong> Introduce a persistent, sticky footer with full-width "Next" buttons. This
-                    anchors the user experience and provides a clear, reachable hit target on all device sizes.</p>
+                <p><strong>Problem:</strong> The buttons jump around between screens. It breaks the user's flow.</p>
+                <p><strong>My Solution:</strong> I'm introducing a sticky footer. The "Next" button will always be in
+                    the same thumb-friendly spot, no matter the screen size.</p>
                 <img src="assets/onboarding_navigation_ux.png" alt="Onboarding Navigation">
             </div>
 
             <div class="card">
                 <h3>Date Picker</h3>
-                <p><strong>Problem:</strong> The default calendar widget requires excessive tapping to select a birth
-                    year.</p>
-                <p><strong>Solution:</strong> Replace with a native iOS/Android scroll-wheel picker (Spinner). This
-                    allows rapid year selection and aligns with platform-specific interaction patterns.</p>
+                <p><strong>Problem:</strong> The calendar widget is clunky for selecting a birth year (too many taps).
+                </p>
+                <p><strong>My Solution:</strong> I'll swap this for a native scroll-wheel (Spinner). It's faster,
+                    cleaner, and what iOS/Android users expect.</p>
                 <img src="assets/default_date_picker.png" alt="Date Picker">
             </div>
 
             <div class="card">
                 <h3>Location Selection</h3>
-                <p><strong>Problem:</strong> Relying solely on map-pin dragging can be imprecise.</p>
-                <p><strong>Solution:</strong> Integrate the Google Places Autocomplete API. This offers a "Search-first"
-                    experience, allowing users to select verified locations instantly with zero ambiguity.</p>
+                <p><strong>Problem:</strong> Dragging a pin is frustrating when you know exactly where you want to go.
+                </p>
+                <p><strong>My Solution:</strong> I'll integrate Google Places Autocomplete. Users can just type "Cape
+                    Town Airport" and get the exact spot instantly.</p>
                 <img src="assets/current_location_selection_ux.png" alt="Location Selection">
             </div>
 
             <div class="card">
                 <h3>Design System Consistency</h3>
-                <p><strong>Problem:</strong> Corner radii and element spacing are inconsistent throughout the app.</p>
-                <p><strong>Solution:</strong> Implement a strict "Design Token" system. By defining global variables for
-                    radius, spacing, and color, we ensure every screen feels part of a cohesive, premium product.</p>
+                <p><strong>Problem:</strong> The app feels a bit "wild west" with inconsistent spacing and mixed corner
+                    styles.</p>
+                <p><strong>My Solution:</strong> I'm implementing a strict Design System. By locking down our spacing
+                    and radius variables, every screen will feel cohesive and polished.</p>
             </div>
         </section>
 
@@ -118,18 +122,18 @@
             <div class="alert alert-critical">
                 <div style="min-width: 150px; flex-shrink: 0;"><strong>ACTION REQUIRED:</strong></div>
                 <div>
-                    We are encountering a sign-in issue with the Apple ID (<code
-                        style="color: var(--accent-pink);">daniellalouw81@gmail.com</code>), which is preventing the
-                    final $99 payment. We recommend coordinating a sign-in session tomorrow (when time zones align) to
-                    resolve this, allowing us to begin iOS testing this weekend.
+                    I'm hitting a wall with the Apple ID sign-in (<code
+                        style="color: var(--accent-pink);">daniellalouw81@gmail.com</code>), which is blocking the final
+                    payment. Let's hop on a quick call tomorrow (when our time zones align) to sort this out. I want to
+                    get the iOS build running on my phone this weekend.
                 </div>
             </div>
-            <p>We cannot proceed with iPhone testing until this is resolved.</p>
+            <p>I can't proceed with iPhone testing until we clear this payment hurdle.</p>
         </section>
 
         <section>
             <h2>4. Vision vs. Reality</h2>
-            <p>A direct comparison between the current legacy app and our proposed "Vision Prototype".</p>
+            <p>A side-by-side look at where we are vs. where I want to take this.</p>
 
             <div class="card">
                 <h3>Booking Flow</h3>
@@ -201,9 +205,9 @@
             <h2 style="margin-top: 0;">6. Strategic Recommendation</h2>
             <p><strong>December On-Site Sprint (Somerset West)</strong></p>
             <p>
-                Leverage the upcoming December visit for a dedicated 2-week on-site sprint.
-                Goal: Collaboratively review the current app, discuss the product direction, and refine the roadmap
-                side-by-side with the operations team.
+                I want to leverage my upcoming visit for a dedicated 2-week on-site sprint.
+                Goal: Sit down with the operations team, review the current app side-by-side, and lock in the product
+                direction together.
             </p>
         </section>
 
