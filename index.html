@@ -46,7 +46,7 @@
                 <li><strong>T&Cs Checkbox:</strong> The text isn't clickable, which is a small but annoying usability
                     issue.</li>
                 <li><strong>Inconsistent Errors:</strong> The error messages feel a bit raw (e.g., lowercase "please
-                    select your birthdate"). I'll polish these up to sound more professional.</li>
+                    select your birthdate"). Recommendation: Polish these up to sound more professional.</li>
                 <li><strong>Typos:</strong> Spotted a "Nexts" button on the startup screen. Easy fix.</li>
             </ul>
             <img src="assets/nexts_typo.png" alt="Nexts Typo">
@@ -58,9 +58,22 @@
             </div>
             <img src="assets/uploaded_image_1764632090827.png" alt="Booking UI Issues">
 
+            <div class="card">
+                <h3>Confusing CTA Logic</h3>
+                <p><strong>Problem:</strong> The user is forced to click "Get a Quote" <em>before</em> they can click
+                    "Accept". If they click "Accept" first, they get an error telling them to get a quote. This is
+                    redundant friction.</p>
+                <p><strong>Recommendation:</strong> Automate this. The quote should calculate instantly in real-time as
+                    the user enters details. There should be one single "Book Now" button.</p>
+                <div class="comparison-grid" style="margin-top: 1rem;">
+                    <img src="assets/legacy_cta_1.png" alt="Get Quote Button" style="margin: 0;">
+                    <img src="assets/legacy_cta_2.png" alt="Error Message" style="margin: 0;">
+                </div>
+            </div>
+
             <p><strong>Features to Retain:</strong> Despite the layout issues, the underlying logic for Pickup Time,
-                Special Instructions, and Extras is actually quite solid. I plan to keep this logic but break it down
-                into a multi-step "Wizard" to make it feel less overwhelming.</p>
+                Special Instructions, and Extras is actually quite solid. Recommendation: Retain this logic but break it
+                down into a multi-step "Wizard" to make it feel less overwhelming.</p>
         </section>
 
         <section>
@@ -85,10 +98,12 @@
             </div>
 
             <div class="card">
-                <h3>Onboarding Navigation</h3>
-                <p><strong>Problem:</strong> The buttons jump around between screens. It breaks the user's flow.</p>
-                <p><strong>Recommendation:</strong> Introduce a sticky footer. The "Next" button will always be in the
-                    same thumb-friendly spot, no matter the screen size.</p>
+                <h3>Navigation & Back Buttons</h3>
+                <p><strong>Problem:</strong> Navigation controls are inconsistent. Buttons jump around, and critically,
+                    there is often <strong>no Back button</strong> on deep screens, trapping the user.</p>
+                <p><strong>Recommendation:</strong> Introduce a standard top navigation bar with a dedicated "Back"
+                    chevron on every child screen. Combine this with a sticky footer for the "Next" action to anchor the
+                    experience.</p>
                 <img src="assets/onboarding_navigation_ux.png" alt="Onboarding Navigation">
             </div>
 
@@ -126,18 +141,29 @@
             <div class="alert alert-critical">
                 <div style="min-width: 150px; flex-shrink: 0;"><strong>ACTION REQUIRED:</strong></div>
                 <div>
-                    I'm hitting a wall with the Apple ID sign-in (<code
-                        style="color: var(--accent-pink);">daniellalouw81@gmail.com</code>), which is blocking the final
-                    payment. Let's hop on a quick call tomorrow (when our time zones align) to sort this out. I want to
-                    get the iOS build running on my phone this weekend.
+                    The Apple ID sign-in (<code style="color: var(--accent-pink);">daniellalouw81@gmail.com</code>) is
+                    currently blocking the final payment. Recommendation: Coordinate a sign-in session tomorrow (when
+                    time zones align) to resolve this. Goal: Begin iOS testing this weekend.
                 </div>
             </div>
-            <p>I can't proceed with iPhone testing until we clear this payment hurdle.</p>
+            <p>iPhone testing cannot proceed until this payment hurdle is cleared.</p>
         </section>
 
         <section>
-            <h2>4. Vision vs. Reality</h2>
-            <p>A side-by-side look at where we are vs. where I want to take this.</p>
+            <h2>4. Legacy App Walkthrough</h2>
+            <p>A screen recording of the current "Rider" experience, highlighting the friction points discussed above.
+            </p>
+            <div class="card" style="padding: 0; overflow: hidden;">
+                <video controls style="width: 100%; display: block;">
+                    <source src="assets/legacy_walkthrough.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Vision vs. Reality</h2>
+            <p>A side-by-side look at where we are vs. the proposed future state.</p>
 
             <div class="card">
                 <h3>Booking Flow</h3>
@@ -195,7 +221,7 @@
         </section>
 
         <section>
-            <h2>5. Vision Prototype Demo</h2>
+            <h2>6. Vision Prototype Demo</h2>
             <p>A walkthrough of the new high-fidelity prototype interaction.</p>
             <div class="card" style="padding: 0; overflow: hidden;">
                 <video controls style="width: 100%; display: block;">
@@ -206,10 +232,10 @@
         </section>
 
         <section class="card" style="border-color: var(--accent-teal); background: rgba(20, 184, 166, 0.05);">
-            <h2 style="margin-top: 0;">6. Strategic Recommendation</h2>
+            <h2 style="margin-top: 0;">7. Strategic Recommendation</h2>
             <p><strong>December On-Site Sprint (Somerset West)</strong></p>
             <p>
-                I want to leverage my upcoming visit for a dedicated 2-week on-site sprint.
+                Recommendation: Leverage the upcoming December visit for a dedicated 2-week on-site sprint.
                 Goal: Sit down with the operations team, review the current app side-by-side, and lock in the product
                 direction together.
             </p>
