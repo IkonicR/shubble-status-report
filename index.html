@@ -93,7 +93,8 @@
                 <h3>Redundant Navigation</h3>
                 <p><strong>Problem:</strong> The interface is cluttered with duplicate actions. For example, there are
                     <strong>4 different ways</strong> to access the Profile screen from the Home page (Sidebar, Top
-                    Right Icon, Middle Card, Bottom Nav). This confuses users about where they are supposed to go.</p>
+                    Right Icon, Middle Card, Bottom Nav). This confuses users about where they are supposed to go.
+                </p>
                 <p><strong>Recommendation:</strong> Simplify. One clear home for every action. The Profile belongs in
                     the Settings tab, not scattered across the UI.</p>
             </div>
@@ -137,9 +138,9 @@
 
             <div class="card">
                 <h3>Redundant "Age" Input</h3>
-                <p><strong>Problem:</strong> There is a grayed-out "Age" field sitting <em>above</em> the Date of Birth
-                    picker. It's uneditable and only fills in <em>after</em> you select a date below it. This confuses
-                    users who try to tap it first.</p>
+                <p><strong>Problem:</strong> There is an "Age" field sitting <em>above</em> the Date of Birth picker. It
+                    looks like a normal, active input, but it's completely unclickable. It only auto-fills
+                    <em>after</em> you select a date below it, which is confusing and frustrating UX.</p>
                 <p><strong>Recommendation:</strong> Delete this field. We don't need to show the user their own age
                     math. Just take the Date of Birth and calculate it in the background.</p>
                 <img src="assets/legacy_age_input.png" alt="Redundant Age Input" style="max-width: 300px;">
