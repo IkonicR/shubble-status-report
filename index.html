@@ -41,6 +41,8 @@
                 plug immediately.
             </div>
             <ul>
+                <li><strong>Confusing Terminology:</strong> The app asks users to "Register as Client". This is internal
+                    dev-speak. It should clearly say "Sign Up as Rider" or "Passenger" to avoid confusion.</li>
                 <li><strong>T&Cs Checkbox:</strong> The text isn't clickable, which is a small but annoying usability
                     issue.</li>
                 <li><strong>Inconsistent Errors:</strong> The error messages feel a bit raw (e.g., lowercase "please
@@ -109,11 +111,13 @@
             </div>
 
             <div class="card">
-                <h3>Design System Consistency</h3>
-                <p><strong>Problem:</strong> The app feels a bit "wild west" with inconsistent spacing and mixed corner
-                    styles.</p>
-                <p><strong>My Solution:</strong> I'm implementing a strict Design System. By locking down our spacing
-                    and radius variables, every screen will feel cohesive and polished.</p>
+                <h3>Design System Strategy</h3>
+                <p><strong>Problem:</strong> The app lacks a cohesive visual language, leading to inconsistent corner
+                    radii and spacing.</p>
+                <p><strong>My Solution:</strong> I will build a "Plug-and-Play" Design System (colors, typography,
+                    spacing tokens) independently. This means I can hand over a complete style package that the external
+                    team simply needs to "plug in," ensuring a premium look without them needing to make design
+                    decisions.</p>
             </div>
         </section>
 
